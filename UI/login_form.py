@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 def login_form():
-    st.title("Login Form for Weather App")
+    st.title("Login Form with PandasQL")
     
     if "logout_message" in st.session_state:
         st.success(st.session_state["logout_message"])
