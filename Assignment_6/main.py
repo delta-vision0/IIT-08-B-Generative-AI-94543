@@ -2,6 +2,7 @@ import streamlit as st
 import gemini
 import groq
 import local_llm
+import time
 st.set_page_config(
     page_title="Vision ChatBot",
     layout="centered",
@@ -51,7 +52,7 @@ if st.session_state.page == "gemini":
         response = gemini.gemini_call(prompt)
         st.session_state.messages_gemini.append({
             "role": "assistant",
-            "content": response
+            "content": stream_string_generator(response)
         })
 
     for msg in st.session_state.messages_gemini:
