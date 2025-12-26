@@ -54,6 +54,8 @@ if csv_file is not None:
         question : {user_input}
         generated query: {query}
         result : {result2}
+
+        if user tries to delete or truncate , it should say only select queries allowed
 """
         explain = llm.invoke(prompt)
         st.write(explain.content)
