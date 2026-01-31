@@ -20,3 +20,4 @@ def get_weather(city_name, api_key):
         return weather_info
     else:
         return None
+
